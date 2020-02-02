@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="nrousseau" id="001-schema">
+        <sqlFile path="001-schema.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet author="nrousseau" id="002-fullsearch">
+        <preConditions onFail="MARK_RAN">
+            <dbms type="postgresql" />
+        </preConditions>
+        <sqlFile path="002-fullsearch.sql" relativeToChangelogFile="true"  endDelimiter="\nGO"/>
+    </changeSet>
+
+    <changeSet author="nrousseau" id="003-data">
+        <sqlFile path="003-data.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+</databaseChangeLog>
