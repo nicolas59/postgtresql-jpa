@@ -19,4 +19,8 @@
     <changeSet author="nrousseau" id="003-data">
         <sqlFile path="003-data.sql" relativeToChangelogFile="true"/>
     </changeSet>
+
+    <changeSet author="nrousseau" id="004-organizationUnie">
+        <sqlFile path="004-organizationUnit.sql" relativeToChangelogFile="true"/>
+    </changeSet>
 </databaseChangeLog>

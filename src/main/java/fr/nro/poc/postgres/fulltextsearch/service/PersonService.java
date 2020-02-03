@@ -33,7 +33,7 @@ public class PersonService {
                 .replaceAll(" +", ":\\*&")
                 .concat(":*");
 
-        log.debug("Search criteria : {}", criteria);
+        log.debug("Search criteria   : {}", criteria);
         log.debug("Rank criteria : {}", order);
 
         return this.personRepository.findByFullsearch(criteria, order, PageRequest.of(pageIndex, pageSize));
